@@ -1,0 +1,19 @@
+===============================================================
+File 'Age3Log.txt' opened at Wed Jul 17 14:37:35 2019
+
+===============================================================
+
+PreGame  11719:  Game locale: English
+PreGame  12932:  nvCPL is unavailable.
+PreGame  15616:  ------------------------------------------------------------------------
+PreGame  15616:  Render using: NVIDIA GeForce GTX 1050
+PreGame  15616:     Driver: nvldumd.dll -- version 25.21.14.1771
+PreGame  15616:     VendorID = 0x10de
+PreGame  15616:     DeviceID = 0x1c8d
+PreGame  15616:     SubSysID = 0x836b103c
+PreGame  15616:     Revision = 0xa1
+PreGame  15616:     DeviceIdentifier: {D7B71E3E-5FCD-11CF-6775-65A31BC2D435}
+PreGame  15632:     XML render config -- found vendor 0x10DE as 'NVIDIA'
+PreGame  15633:     XML render config -- choosing generic device configuration file 'geforce fx 6800'
+PreGame  33578:  Game startup complete (33.58 sec)!
+PreGame  33578:  ------------------------------------------------------------
