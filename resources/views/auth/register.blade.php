@@ -61,6 +61,31 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="rolee" class="col-md-4 col-form-label text-md-right">Role</label>
+
+                            <div class="col-md-6">
+
+                                 <select name="role" class="form-control">
+                                        <option value="1">UPT</option>
+                                        <option value="0">Verifikator</option>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="rolee" class="col-md-4 col-form-label text-md-right">Nama Upt</label>
+
+                            <div class="col-md-6">
+
+                                 <select name="uptsa" class="form-control">
+                                        <option value ="">--</option>
+                                        @foreach($listupt as $data)
+                                        <option value="{{$data->id_upt}}">{{$data->nama_upt}}</option>
+                                        @endforeach
+
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
