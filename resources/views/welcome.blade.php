@@ -122,10 +122,11 @@
 							  </tr>
 							</thead>
 							<tbody>
+								@php
+                 				$i = 1;
+                  				@endphp
 								  @foreach($listupt as $list)
-                 						 @php
-                 						 $i = 1;
-                  						@endphp
+                 						 
 							  <tr>
 								<td>{{$i}}</td>
 								<td>{{$list->nama_upt}}</td>
