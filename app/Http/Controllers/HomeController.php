@@ -188,7 +188,7 @@ class HomeController extends Controller
                 $Transaksi->status = 2;
                 }
 
-                $totalnilai = $abc->nilai * $capaian;
+                $totalnilai = $abc->nilai * $capaian * 1.66;
                 $Transaksi->nilai = $totalnilai;
                 $Transaksi->keterangan = $request->keterangan;
                 $Transaksi->capaian = $capaian;
