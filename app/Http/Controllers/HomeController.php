@@ -51,16 +51,20 @@ class HomeController extends Controller
 		$data['coba2'] = 45;
 
 		$data['datadivisi'] = Divisi::with('Upt')->get();
-        $data['tnonverif'] = Transaksi::where('status',0)->get();
-        $data['tverif'] = Transaksi::where('status',1)->get();
-        $data['trevisi'] = Transaksi::where('status',2)->get();
+       
 
         $datatok = Divisi::all();
         $data['dataupt'] = Upt::all();
 
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $romawi =RomawiSoal::with('NomorSoal')->get();
+        $ses =  Auth::user();
+        $data['tnonverif'] = Transaksi::where('status',0)->get();
+        $data['tverif'] = Transaksi::where('status',1)->get();
+        $data['trevisi'] = Transaksi::where('status',2)->get();
 
+        
+       
         $data['session'] = Auth::user();
         return view('home2',$data);
     }
@@ -225,9 +229,14 @@ class HomeController extends Controller
 	
 		public function status()
     {
+                $ses =  Auth::user();
 
+         $data['tnonverif'] = Transaksi::where('status',0)->where('created_by',$ses->id)->get();
+        $data['tverif'] = Transaksi::where('status',1)->where('created_by',$ses->id)->get();
+        $data['trevisi'] = Transaksi::where('status',2)->where('created_by',$ses->id)->get();
 		$data['session'] = Auth::user();
 		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+
         return view('status',$data);
     }
 	
