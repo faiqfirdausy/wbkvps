@@ -43,6 +43,7 @@ class HomeController2 extends Controller
 
 	    public function indexfront()
     {
+        $data['coba'] = 25 * 2.5;
         $data['listupt'] = Upt::all();
         $data['listnilai'] = Transaksi::groupBy('created_by')
    ->selectRaw('*, sum(nilai) as sum')

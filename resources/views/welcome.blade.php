@@ -129,19 +129,38 @@
 							  <tr>
 								<td>{{$i}}</td>
 								<td>{{$list->nama_upt}}</td>
+
 								<td>
-									@foreach($listnilai as $list2)
+								@foreach($listnilai as $list2)
+
 									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
 									<div class="container-bar">
-									  <div class="skills-bar merah">{{$list2->sum}}%</div>
-									</div>
-									@else
+										<style>
+										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
+											width: {{$list2->sum}}%; 
+											@if($list2->sum < 40)
+											background-color: #f44336;
+
+											@elseif($list2->sum < 40 && $list->sum < 70)
+											background-color: #EBAF24;
+
+											@else
+											background-color: #4CAF50;
+											@endif
+												}
+										</style>
 									
 
+									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >{{$list2->sum}}%</div>
+
+									</div>
+									@else
 									@endif
-									@endforeach
+								@endforeach
+
 								</td>
-								<td>Harus meningkatkan pengawasan terhadap UPT</td>
+								<td>Harus meningkatkan pengawasan terhadap UPT
+								</td>
 								<!--<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>-->
 								
 							  </tr>
