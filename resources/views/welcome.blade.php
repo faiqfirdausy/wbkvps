@@ -117,24 +117,38 @@
 								<th>NAMA UPT</th>
 								<th>PROGRES PEMBANGUNAN</th>
 								<th>REKOMENDASI</th>
-								<th>AKSI</th>
+						<!--		<th>REKOMENDASI</th> -->
+
 							  </tr>
 							</thead>
 							<tbody>
-
+								  @foreach($listupt as $list)
+                 						 @php
+                 						 $i = 1;
+                  						@endphp
 							  <tr>
-								<td>1</td>
-								<td>Lapas Kelas I Surabaya</td>
+								<td>{{$i}}</td>
+								<td>{{$list->nama_upt}}</td>
 								<td>
+									@foreach($listnilai as $list2)
+									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
 									<div class="container-bar">
-									  <div class="skills-bar merah">20%</div>
+									  <div class="skills-bar merah">{{$list2->sum}}%</div>
 									</div>
+									@else
+									
+
+									@endif
+									@endforeach
 								</td>
 								<td>Harus meningkatkan pengawasan terhadap UPT</td>
-								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>
-
+								<!--<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>-->
+								
 							  </tr>
-
+							     @php
+                  				$i++;
+                  				@endphp
+							  @endforeach
 							</tbody>
 						  </table>
 						  
