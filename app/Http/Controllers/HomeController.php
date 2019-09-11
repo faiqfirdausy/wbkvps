@@ -96,7 +96,7 @@ class HomeController extends Controller
                     'triwulan'         => 'required'
                 );
         $rulesbesar = array(
-                    'upload_files'  => 'max:2048'
+                    'upload_files'  => 'max:52048'
                 );
         $error = Validator::make($request->all(), $ruleskosong);
         $errorbesar = Validator::make($request->all(), $rulesbesar);
@@ -431,7 +431,7 @@ class HomeController extends Controller
       public function store(Request $request)
     {
         $rules = array(
-                    'upload_files'  => 'required|max:2048'
+                    'upload_files'  => 'required|max:52048'
                 );
         $error = Validator::make($request->all(), $rules);
         if($error->fails())
