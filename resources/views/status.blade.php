@@ -54,7 +54,6 @@
                   <th>Status</th>
                   <th>Keterangan</th>
                   <th>Capaian</th>
-                  <th>Aksi</th>
 
                 </tr>
                 </thead>
@@ -92,9 +91,7 @@
                     @php $capaian = $data->capaian* 100;@endphp
                     {{$capaian}}%
                     @endif
-                  </td>
-                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
-                </tr>
+                
                 @endforeach
                 </tbody>
             
@@ -123,7 +120,6 @@
                   <th>Status</th>
                   <th>Keterangan</th>
                   <th>Capaian</th>
-                  <th>Aksi</th>
 
                 </tr>
                 </thead>
@@ -160,9 +156,7 @@
                   <td> @if(!empty($data->capaian))
                     @php $capaian = $data->capaian* 100;@endphp
                     {{$capaian}}%
-                    @endif</td>
-                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
-                </tr>
+                    @endif
                 @endforeach
                 </tbody>
             
@@ -192,7 +186,6 @@
                   <th>Status</th>
                   <th>Keterangan</th>
                   <th>Capaian</th>
-                  <th>Aksi</th>
 
                 </tr>
                 </thead>
@@ -229,9 +222,7 @@
                   <td> @if(!empty($data->capaian))
                     @php $capaian = $data->capaian* 100;@endphp
                     {{$capaian}}%
-                    @endif</td>
-                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
-                </tr>
+                    @endif
                 @endforeach
                 </tbody>
             
@@ -260,7 +251,6 @@
                   <th>Status</th>
                   <th>Keterangan</th>
                   <th>Capaian</th>
-                  <th>Aksi</th>
 
                 </tr>
                 </thead>
@@ -297,9 +287,7 @@
                   <td> @if(!empty($data->capaian))
                     @php $capaian = $data->capaian* 100;@endphp
                     {{$capaian}}%
-                    @endif</td>
-                  <td><a href="{{url('verifikasi/'.$data->id)}}" class="btn btn-success " role="button" >Detail</a></td>
-                </tr>
+                    @endif
                 @endforeach
                 </tbody>
             
