@@ -18,9 +18,8 @@
 							</div>
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
-											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO</a></li>
-											<li><a href="#pimti" data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">CAPAIAN ZI</a></li>
-											<li><a href="#ipk/ikm" data-wow-duration="1000ms" class="wow slideInRight animated">IPK/IKM</a></li>
+											<li><a href="#features" data-wow-duration="1000ms" class="wow slideInLeft animated">VIDEO ZI</a></li>
+											<li><a href="#pimti" data-wow-duration="1000ms" class="wow slideInRight animated">CAPAIAN ZI</a></li>
 										</ul>
 									</div>
 							<ul class="social-links text-center">
@@ -118,7 +117,7 @@
 								<th>NAMA UPT</th>
 								<th>PROGRES PEMBANGUNAN</th>
 								<th>REKOMENDASI</th>
-								<th>Aksi</th>
+								<th>AKSI</th>
 							  </tr>
 							</thead>
 							<tbody>

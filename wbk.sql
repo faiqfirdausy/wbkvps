@@ -383,7 +383,7 @@ CREATE TABLE `files` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 /*Data for the table `files` */
 
@@ -396,7 +396,8 @@ insert  into `files`(`id`,`path`,`namafile`,`ori_nama`,`id_transaksi`,`id_datadu
 (12,'file_upload/Kantor Imigrasi Kelas II Blitar/9.pdf','9.pdf',NULL,5,9,'2019-08-30 02:07:50','2019-08-30 02:07:50',2),
 (13,'file_upload/Kantor Imigrasi Kelas II Blitar/1.docx','1.docx',NULL,6,1,'2019-09-03 01:20:10','2019-09-03 01:20:10',2),
 (14,'file_upload/Kantor Imigrasi Kelas II Blitar/12.txt','12.txt',NULL,7,12,'2019-09-03 01:21:26','2019-09-03 01:21:26',2),
-(15,'file_upload/Kantor Imigrasi Kelas II Blitar/18.txt','18.txt',NULL,8,18,'2019-09-03 01:22:55','2019-09-03 01:22:55',2);
+(15,'file_upload/Kantor Imigrasi Kelas II Blitar/18.txt','18.txt',NULL,8,18,'2019-09-03 01:22:55','2019-09-03 01:22:55',2),
+(16,'file_upload/Kantor Imigrasi Kelas II Blitar/24.docx','24.docx',NULL,9,24,'2019-09-04 12:21:56','2019-09-04 12:21:56',2);
 
 /*Table structure for table `jawaban` */
 
@@ -534,17 +535,38 @@ CREATE TABLE `transaksi` (
   `updated_by` int(11) DEFAULT NULL,
   `capaian` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Data for the table `transaksi` */
 
 insert  into `transaksi`(`id`,`id_abcsoal`,`revisi`,`status`,`nilai`,`keterangan`,`created_at`,`updated_at`,`created_by`,`updated_by`,`capaian`) values 
 (1,1,NULL,1,0.5,'ok','2019-08-20 03:39:00','2019-08-23 09:55:23',5,3,1),
 (3,2,NULL,2,0.1,'file kurang banyak','2019-08-29 07:00:31','2019-08-30 10:13:17',2,3,0.2),
-(5,3,NULL,0,0.132,'2 file belum diisi','2019-08-30 02:07:50','2019-08-30 02:07:50',2,3,0.4),
+(5,3,NULL,2,0.264,NULL,'2019-08-30 02:07:50','2019-09-03 09:51:20',2,3,0.8),
 (6,1,NULL,2,0.3,'kurang tanda tangan kepala kantor','2019-09-03 01:20:09','2019-09-03 02:03:34',2,3,0.6),
-(7,4,NULL,0,NULL,NULL,'2019-09-03 01:21:26','2019-09-03 01:21:26',2,NULL,NULL),
-(8,6,NULL,0,NULL,NULL,'2019-09-03 01:22:55','2019-09-03 01:22:55',2,NULL,NULL);
+(7,4,NULL,2,0.198,'data dukung kurang lengkap','2019-09-03 01:21:26','2019-09-04 12:27:30',2,3,0.6),
+(8,6,NULL,0,NULL,NULL,'2019-09-03 01:22:55','2019-09-03 01:22:55',2,NULL,NULL),
+(9,9,NULL,1,0.25,'sudah lengkap','2019-09-04 12:21:56','2019-09-04 12:28:10',2,3,1);
+
+/*Table structure for table `transaksiacplan` */
+
+DROP TABLE IF EXISTS `transaksiacplan`;
+
+CREATE TABLE `transaksiacplan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nilai` double DEFAULT NULL,
+  `path` varchar(500) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `triwulan` varchar(100) DEFAULT NULL,
+  `tahun` int(11) DEFAULT NULL,
+  `namafile` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `transaksiacplan` */
 
 /*Table structure for table `transaksiipk` */
 
@@ -560,10 +582,18 @@ CREATE TABLE `transaksiipk` (
   `updated_by` int(11) DEFAULT NULL,
   `triwulan` varchar(100) DEFAULT NULL,
   `tahun` int(11) DEFAULT NULL,
+  `namafile` varchar(500) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `transaksiipk` */
+
+insert  into `transaksiipk`(`id`,`nilai`,`path`,`created_at`,`created_by`,`updated_at`,`updated_by`,`triwulan`,`tahun`,`namafile`,`status`) values 
+(1,92,'file_upload/Kantor Imigrasi Kelas II Blitar/IpkIkm/2019071910301512239_surat.docx','2019-09-04 09:30:13',2,'2019-09-04 09:30:13',NULL,'Triwulan I',2019,'2019071910301512239_surat.docx',0),
+(2,88,'file_upload/Kantor Imigrasi Kelas II Blitar/IpkIkm/anandi.txt','2019-09-04 10:08:55',2,'2019-09-04 10:08:55',NULL,'Triwulan II',2019,'anandi.txt',0),
+(3,85,'file_upload/Kantor Imigrasi Kelas II Blitar/IpkIkm/chrome-512.png','2019-09-04 12:02:51',2,'2019-09-04 12:02:51',NULL,'Triwulan I',2019,'chrome-512.png',0),
+(4,86,'file_upload/Kantor Imigrasi Kelas II Blitar/IpkIkm/2019071910301512239_surat.docx','2019-09-04 12:23:25',2,'2019-09-04 12:23:25',NULL,'Triwulan IV',2019,'2019071910301512239_surat.docx',0);
 
 /*Table structure for table `transaksivideo` */
 
@@ -577,6 +607,7 @@ CREATE TABLE `transaksivideo` (
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` datetime DEFAULT NULL,
   `path` varchar(500) DEFAULT NULL,
+  `namafile` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -669,6 +700,8 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_upt` int(11) DEFAULT NULL,
+  `id_role` int(11) DEFAULT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
@@ -676,20 +709,23 @@ CREATE TABLE `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_upt` int(11) DEFAULT NULL,
-  `id_role` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`username`,`name`,`email`,`email_verified_at`,`password`,`remember_token`,`created_at`,`updated_at`,`id_upt`,`id_role`) values 
-(1,'faiqfirdausy','faiqfirdausy','faiqfirdausy16@gmail.com',NULL,'$2y$10$sl7k1v3HBXMDKHdMdKJGBuOLkkld4HytNmnOQDUCReg25mcoFu0gu','MAYpmldMqWVJ0Tdte9FocZnIcHDY3Md1Ly1KM2xkQTgxg1QMwjjm91aCCFdQ','2019-02-11 12:31:52','2019-02-12 14:00:46',NULL,NULL),
-(2,'kanimblitar','upt','faiqfirdausy17@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','mnrlA3jYOWwqfKpMhxl8stqHmyZFTMku6zytyZVt8SvbLCuk0T0BdsVEMhE0','2019-02-12 14:08:12','2019-02-18 06:06:04',50,1),
-(3,'admin','admin','admin@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','AKIqD6pC9bDPG9sZew3Ruyg3dDGYkVz5w6NepFZR6bY9hQBOwj7CuULnnfVO','2019-02-18 06:07:12','2019-02-18 06:07:12',65,0),
-(4,'faiq2','faiq2','faiq3@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2',NULL,'2019-07-08 08:42:31','2019-07-08 08:42:31',62,1),
-(5,'lapas1malang','upt','faiqfirdausy18@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','WtdiH4pZhrKgWKsfUsa0xKssx61Sx5ujUcHkHECUktYVMScwFyzZQVgZr47h','2019-02-12 14:08:12','2019-02-12 14:08:12',2,1);
+insert  into `users`(`id`,`username`,`id_upt`,`id_role`,`name`,`email`,`email_verified_at`,`password`,`remember_token`,`created_at`,`updated_at`) values 
+(1,'faiqfirdausy',NULL,NULL,'faiqfirdausy','faiqfirdausy16@gmail.com',NULL,'$2y$10$sl7k1v3HBXMDKHdMdKJGBuOLkkld4HytNmnOQDUCReg25mcoFu0gu','MAYpmldMqWVJ0Tdte9FocZnIcHDY3Md1Ly1KM2xkQTgxg1QMwjjm91aCCFdQ','2019-02-11 12:31:52','2019-02-12 14:00:46'),
+(2,'kanimblitar',50,1,'upt','faiqfirdausy17@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','0ePNBU6AEqYaMMGTLRddvUS3JCRAZLtdO7JpjY8TJ4oszNTMVGYM21Q9vUKj','2019-02-12 14:08:12','2019-02-18 06:06:04'),
+(3,'admin',65,0,'admin','admin@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','VgjNPnbuhExa6KzA4mupyam1pnnsvYOGe6Se5tz8sjDr3ya37qTWJl9YejuO','2019-02-18 06:07:12','2019-02-18 06:07:12'),
+(4,'faiq2',62,1,'faiq2','faiq3@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2',NULL,'2019-07-08 08:42:31','2019-07-08 08:42:31'),
+(5,'lapas1malang',2,1,'upt','faiqfirdausy18@gmail.com',NULL,'$2y$10$mfp1Vd5q4tseGFV9/0vs/.zDo6aN9POj6q4XO5NEXmRAuaYV8PbZ2','WtdiH4pZhrKgWKsfUsa0xKssx61Sx5ujUcHkHECUktYVMScwFyzZQVgZr47h','2019-02-12 14:08:12','2019-02-12 14:08:12'),
+(6,'kanim123',NULL,NULL,'kanim123','kanim123@gmail.com',NULL,'$2y$10$jj5gZ8ElfqJarCp0QT0yR.78iGMJSAO3/wzU.oR4Ao1CtyU1TDITa','azpoz2u3mACD87eBh5QvZk8rPNq7lnc3A1ROEl14bvc5ChGYLMBGo9jJGDfe','2019-09-10 03:06:53','2019-09-10 03:06:53'),
+(9,NULL,NULL,NULL,'kanim234','kanim234@gmail.com',NULL,'$2y$10$Lm8OlpsLJ.GLgjciV/zXp.8GVNt30Z2GtthlbiK1rAIt8VTxe1CSW','TnqnPG1QYyRZk9mJmhCuFiLt2ntgN39opW8bom5EH1G67io36JiNRUwo0W5p','2019-09-10 03:19:47','2019-09-10 03:19:47'),
+(10,NULL,NULL,NULL,'kanim456','kanim456@gmail.com',NULL,'$2y$10$T6n/JvB8r7Hw2v7ZnZOrb.NnQjYngkQpYs53mMiPji4um3TCh2TIq','YfTo8PPBMZMoOaBArqE94MvSgS4QVWWj1yq2FhD7gzLY7DBaUDenhX04hPO4','2019-09-10 03:27:22','2019-09-10 03:27:22'),
+(11,'kanim567',NULL,NULL,'kanim567','kanim567@gmail.com',NULL,'$2y$10$1kK6NgrhF4FcIbtSD2sz0.UY9OvGywW9VdqVVDcKb.PDjtiGwrgZi','Fn1WJpZEPl9fren5VFdqPQ3rK4owFGgXn9IF4BsTxaMjT0K3IoUZ1KPFZFlZ','2019-09-10 03:29:48','2019-09-10 03:29:48'),
+(17,'lapas2surabaya',3,1,'lapas2surabaya','lapas2@gmail.com',NULL,'$2y$10$9zS8VpEYlSRZbGdMf/6IqeSBjdHdfn1nBFsVX.fEJWIJu1QDur9LG','roJsswpNiKR7ztRtJp3dQ7xqft7O8yN0NnQ5EIxpbOx9NjFRPGQV5GhFpFfw','2019-09-11 01:45:50','2019-09-11 01:45:50');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

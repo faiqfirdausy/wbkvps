@@ -47,7 +47,10 @@ class HomeController extends Controller
      */
     public function index()
     {        
-        $data['datadivisi'] = Divisi::with('Upt')->get();
+        $data['coba'] = 55;
+		$data['coba2'] = 45;
+
+		$data['datadivisi'] = Divisi::with('Upt')->get();
         $data['tnonverif'] = Transaksi::where('status',0)->get();
         $data['tverif'] = Transaksi::where('status',1)->get();
         $data['trevisi'] = Transaksi::where('status',2)->get();

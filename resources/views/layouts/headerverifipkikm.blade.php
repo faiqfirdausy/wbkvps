@@ -83,8 +83,9 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
           <li ><a href="{{url('home')}}"><i class="fa fa-laptop"></i>Indikator Perubahan</a></li>
+		  <!--
           <li class="active"><a href="{{url('verifipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/ IKM</a></li>
-          <li ><a href="{{url('verifacplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>
+          <li ><a href="{{url('verifacplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>-->
 
         </li>
 

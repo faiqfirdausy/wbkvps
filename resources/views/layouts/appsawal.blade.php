@@ -77,7 +77,7 @@
 	<script src="{{ asset('js/fastclick.js')}}"></script>
 	<!-- AdminLTE App -->
 	<script src="{{ asset('js/adminlte.min.js')}}"></script>
-	
+	<!--doughnut chart-->
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script>
 		window.onload = function () {
@@ -94,8 +94,8 @@
 				indexLabel: "{label} - #percent%",
 				toolTipContent: "<b>{label}:</b> {y} (#percent%)",
 				dataPoints: [
-					{ y: 67, label: "Tercapai" },
-					{ y: 33, label: "Belum Tercapai" }
+					{ y: {{$coba}}, label: "Tercapai" },
+					{ y: {{$coba2}}, label: "Belum Tercapai" }
 				]
 			}]
 		});
