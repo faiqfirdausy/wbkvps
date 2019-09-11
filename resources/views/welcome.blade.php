@@ -339,7 +339,7 @@
 
 
 		
-        <!--================IPK / IPM==================== -->
+        <!--================IPK / IPM==================== 
 		<section id="ipk/ikm" class="contact">
 			<div class="container">
 				<div class="row mb50">
@@ -354,7 +354,6 @@
 					</div>
 					
 					
-					<!-- form -->
 					<div class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							<form action="#" id="contact-form">
@@ -394,7 +393,7 @@
 				</div>
 			</div>
 			
-		</section>
+		</section>-->
 		 <!--
         Video
         ==================================== -->
