@@ -223,6 +223,14 @@ class HomeController extends Controller
         return view('verifikasifix2',$data);
     }
 	
+		public function status()
+    {
+
+		$data['session'] = Auth::user();
+		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('status',$data);
+    }
+	
 		public function verifipkikm()
     {
         $data['ipkikm'] = TransaksiIpk::all();
