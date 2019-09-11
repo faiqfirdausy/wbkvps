@@ -32,15 +32,15 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Video</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul Video">
+                  <input name="judul" type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul Video">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Link Video</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Link Video">
+                  <input name="link" type="text" class="form-control" id="exampleInputPassword1" placeholder="Link Video">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Gambar Cover Video</label>
-                  <input type="file" id="exampleInputFile">
+                  <input name="cover" type="file" id="exampleInputFile">
 
                   <p class="help-block">*ukuran dimensi gambar 400x300</p>
                 </div>

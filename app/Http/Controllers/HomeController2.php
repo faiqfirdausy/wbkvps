@@ -43,7 +43,8 @@ class HomeController2 extends Controller
 
 	    public function indexfront()
     {
-        return view('welcome');
+        
+        return view('welcome',$data);
     }
 
 	    public function capaian()

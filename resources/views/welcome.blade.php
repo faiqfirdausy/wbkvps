@@ -121,6 +121,7 @@
 							  </tr>
 							</thead>
 							<tbody>
+
 							  <tr>
 								<td>1</td>
 								<td>Lapas Kelas I Surabaya</td>
@@ -133,30 +134,7 @@
 								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>
 
 							  </tr>
-							  <tr>
-								<td>2</td>
-								<td>Kanim Kelas I Khusus TPI Surabaya</td>
-								<td>
-									<div class="container-bar">
-									  <div class="skills-bar hijau">90%</div>
-									</div>
-								</td>
-								<td>Maju kontestasi tahun depan</td>
-								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal2" >Detail</a></td>
 
-							  </tr>
-							  <tr>
-								<td>3</td>
-								<td>Kanim Kelas II Blitar</td>
-								<td>
-									<div class="container-bar">
-									  <div class="skills-bar kuning">56%</div>
-									</div>
-								</td>
-								<td>Terus tingkatkan pengawasan</td>
-								<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal3" >Detail</a></td>
-
-							  </tr>
 							</tbody>
 						  </table>
 						  
