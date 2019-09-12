@@ -70,7 +70,7 @@ span.color {
 
 body > section,
 .footer {
-	padding: 70px 0;
+	padding: 70px 0 70px 0;
 	background-color: #f4f7f9;
 }
 
@@ -394,6 +394,7 @@ background-color: rgba(108, 192, 145, 0.15);
 
 .overlay {
 	background-color: rgba(96,5,5,.9);
+	padding: 20px;
 	text-align: center;
 	position: absolute;
 	left: 0;
@@ -441,7 +442,7 @@ background-color: rgba(108, 192, 145, 0.15);
 }
 
 .work-item .overlay h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   margin: 25px 0 8px;

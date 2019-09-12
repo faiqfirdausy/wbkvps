@@ -431,34 +431,14 @@
 	
 				</div>
 			</div>
-			<div class="project-wrapper">
-			
-				<figure class="mix work-item branding">
-					<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-				
-				
-				<figure class="mix work-item web">
-					<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item logo-design">
+			<div class="project-wrapper">		
+		
+					  <div class="carousel slide media-carousel" id="media">
+						<div class="carousel-inner">
+						  <div class="item active">
+							<div class="row">
+							  
+					<figure class="mix work-item logo-design">
 					<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
 					<figcaption class="overlay">
 						<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
@@ -468,70 +448,313 @@
 						  Putar Video
 						</button>
 					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Lapas Kelas I Surabaya Goes To WBK/ WBBM</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-			
-				<figure class="mix work-item logo-design">
-					<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item photography">
-					<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Hari Ulang Tahun RI ke 74</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-				
-				<figure class="mix work-item branding">
-					<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Video HUT RI ke 74</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
-				
-				
-				<figure class="mix work-item web">
-					<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
-					<figcaption class="overlay">
-						<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
-						<p>Kanwil Kemenkumham Jatim</p>
-						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
-						  Putar Video
-						</button>
-					</figcaption>
-				</figure>
+							</figure>
+							
+							<figure class="mix work-item photography">
+								<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Hari Ulang Tahun RI ke 74</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							
+							<figure class="mix work-item branding">
+								<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Video HUT RI ke 74</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							
+							
+							<figure class="mix work-item web">
+								<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							
+							</div>
+							<div class="row">
+							  
+							  	<figure class="mix work-item branding">
+									<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								
+								<figure class="mix work-item web">
+									<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item logo-design">
+									<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item photography">
+									<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Lapas Kelas I Surabaya Goes To WBK/ WBBM</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+							
+							</div>
+						  </div>
+						  
+						  <div class="item">
+							<div class="row">
+							  <figure class="mix work-item branding">
+								<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							
+							  <figure class="mix work-item photography">
+								<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Hari Ulang Tahun RI ke 74</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							  
+							  <figure class="mix work-item photography">
+								<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Hari Ulang Tahun RI ke 74</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							  <figure class="mix work-item photography">
+								<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+								<figcaption class="overlay">
+									<h4>Hari Ulang Tahun RI ke 74</h4>
+									<p>Kanwil Kemenkumham Jatim</p>
+									<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+									<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+									  Putar Video
+									</button>
+								</figcaption>
+							</figure>
+							
+							</div>
+							<div class="row">
+							  
+							  	<figure class="mix work-item branding">
+									<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								
+								<figure class="mix work-item web">
+									<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item logo-design">
+									<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item photography">
+									<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Lapas Kelas I Surabaya Goes To WBK/ WBBM</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+							
+							</div>
+						  </div>
+						  <div class="item">
+							<div class="row">
+							  <figure class="mix work-item branding">
+									<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								
+								<figure class="mix work-item web">
+									<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item logo-design">
+									<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item photography">
+									<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Lapas Kelas I Surabaya Goes To WBK/ WBBM</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>    
+							</div>
+							<div class="row">
+							  <figure class="mix work-item branding">
+									<img src="{{ asset('frontend/img/works/item-1.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>HARI MERDEKA COVER BY COKELAT (UNOFFICIAL VIDEO BY KEMENKUMHAM JATIM)</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lDIOqSrRizo" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								
+								<figure class="mix work-item web">
+									<img src="{{ asset('frontend/img/works/item-2.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Seru! Begini aksi pegawai Kemenkumham Jatim peringati HUT RI</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/2elm7nKN4L8" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item logo-design">
+									<img src="{{ asset('frontend/img/works/item-3.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Tips Lolos Tes Kesamaptaan CASN Kemenkumham 2018</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>
+								
+								<figure class="mix work-item photography">
+									<img src="{{ asset('frontend/img/works/item-4.jpg') }}" alt="">
+									<figcaption class="overlay">
+										<h4>Lapas Kelas I Surabaya Goes To WBK/ WBBM</h4>
+										<p>Kanwil Kemenkumham Jatim</p>
+										<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+										<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/adZSQzCmLkk" data-target="#myModal">
+										  Putar Video
+										</button>
+									</figcaption>
+								</figure>    
+							</div>
+						  </div>
+						</div>
+						<a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+						<a data-slide="next" href="#media" class="right carousel-control">›</a>
+					  </div>                          
+
 				
 			</div>
+			
 </section>
 <!-- Modal video-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

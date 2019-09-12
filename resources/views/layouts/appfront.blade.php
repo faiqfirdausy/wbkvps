@@ -18,6 +18,8 @@
 		
 		<!-- CSS
 		================================================== -->
+		<!--video gallery-->
+		<link rel="stylesheet" href="{{ asset('frontend/css/videoslider.css') }}">
 		<!-- Fontawesome Icon font -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!-- Twitter Bootstrap css -->
@@ -176,6 +178,10 @@
 		<!--Video-->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 		<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 		<!-- Main jQuery -->
 		<script src="{{ asset('frontend/js/jquery-1.11.1.min.js')}}"></script>
 		<!-- Single Page Nav -->
