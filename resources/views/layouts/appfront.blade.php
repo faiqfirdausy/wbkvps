@@ -121,8 +121,8 @@
 				</div>
 				<ul class="social-links text-center">
 					<li><a href="https://twitter.com/Kemenkumham_Jtm"><i class="fa fa-twitter fa-lg"></i></a></li>
-					<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-					<li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
+					<li><a href="https://id-id.facebook.com/humaskanwilkemenkumhamjatim"><i class="fa fa-facebook fa-lg"></i></a></li>
+					<li><a href="https://www.instagram.com/kemenkumhamjatim/?hl=id"><i class="fa fa-instagram fa-lg"></i></a></li>
 					<li><a href="https://jatim.kemenkumham.go.id/"><i class="fa fa-dribbble fa-lg"></i></a></li>
 				</ul>
 			</div>
