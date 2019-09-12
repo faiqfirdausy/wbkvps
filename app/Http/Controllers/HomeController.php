@@ -75,8 +75,9 @@ class HomeController extends Controller
         public function updatevideo(Request $request)
     {
         $userId = Auth::user()->id;
-
-       $ruleskosong = array(
+        $upt = User::with('Upt')->find($userId);
+        $nama_upt = $upt->Upt->nama_upt;
+        $ruleskosong = array(
                     'judul'  => 'required',
                     'cover'  => 'required',
                     'link'   => 'required',
