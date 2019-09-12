@@ -28,7 +28,9 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="POST" action="{{ url('video/update') }}" enctype="multipart/form-data">
+              {!! csrf_field() !!}
+
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Video</label>
