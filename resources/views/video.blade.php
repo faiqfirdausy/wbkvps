@@ -126,3 +126,48 @@
 
     <!-- /.content -->
 @endsection
+@section('scripts')
+<script type="text/javascript">
+  @if(!empty(session('pesan')))
+    @if(session('pesan') == 'sukses')
+      $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Menambahkan Video',
+        'success',
+        )
+        });
+    @elseif(session('pesan') == 'kosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'Field Tidak Boleh Kosong',
+        'error',
+        )
+        });
+     @elseif(session('pesan') == 'filekosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Ditemukan',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'besar')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Harus Gambar Berdimensi 300 x 400',
+        'error',
+        )
+        });
+    @endif
+
+
+  @endif
+</script>
+@endsection

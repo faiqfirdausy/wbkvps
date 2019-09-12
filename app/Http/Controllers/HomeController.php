@@ -74,7 +74,6 @@ class HomeController extends Controller
     }
         public function updatevideo(Request $request)
     {
-      dd($request->cover); 
         $userId = Auth::user()->id;
 
        $ruleskosong = array(
