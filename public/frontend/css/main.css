@@ -189,8 +189,8 @@ body > section,
 }
 
 .carousel-caption {
-  top: 35%;
-  bottom: 25%;
+  top: 5%;
+  bottom: 15%;
 }
 
 .carousel-caption h2 {
@@ -778,9 +778,7 @@ label.error {
 
 .skills-bar {
   text-align: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
+  color: #555;
 }
 
 /*searcg table*/
