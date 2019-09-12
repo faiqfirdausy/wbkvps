@@ -456,7 +456,7 @@
 									<div class="row">
 
 								@else
-								<div>
+								</div>
 								<div class="row">
 								@endif
 							@endif
