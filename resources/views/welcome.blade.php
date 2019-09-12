@@ -124,9 +124,15 @@
 								<td>{{$list->nama_upt}}</td>
 
 								<td>
+								@php
+								$temp =0;
+								@endphp
 								@foreach($listnilai as $list2)
 
 									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
+									@php
+									$temp = 1;
+									@endphp
 									<div class="container-bar">
 										<style>
 										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
@@ -150,6 +156,20 @@
 									@else
 									@endif
 								@endforeach
+								@if($temp ==0)
+								<div class="container-bar">
+								<style>
+									div.warnazz{
+											width: 0%; 
+											background-color: #f44336;
+										}
+								</style>
+  									<div class="skills-bar warnazz" >0%</div>
+
+								</div>
+								@endif
+
+
 
 								</td>
 								<td>Harus meningkatkan pengawasan terhadap UPT
