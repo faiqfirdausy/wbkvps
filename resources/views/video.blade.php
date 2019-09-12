@@ -37,7 +37,7 @@
                   <input name="judul" type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul Video">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Link Video</label>
+                  <label for="exampleInputPassword1">Embed Link Youtube</label>
                   <input name="link" type="text" class="form-control" id="exampleInputPassword1" placeholder="Link Video">
                 </div>
                 <div class="form-group">
@@ -76,7 +76,7 @@
                 <tr>
 				          <th>NO</th>
                   <th>JUDUL VIDEO</th>
-                  <th>LINK VIDEO</th>                  
+                  <th>LINK YOUTUBE</th>                  
                 </tr>
                 </thead>
                 <tbody>
