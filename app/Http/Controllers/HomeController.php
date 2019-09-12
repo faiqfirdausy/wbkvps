@@ -46,9 +46,16 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {        
-        $data['coba'] = 55;
-		$data['coba2'] = 45;
+    {
+    $userId = Auth::user()->id;
+    $tercapai1 = Transaksi::where('created_by',$userId)
+   ->selectRaw('*, sum(nilai) as sum')
+   ->first(); 
+    $belumtercapai = 100 - $tercapai1->sum ;
+    $tercapai = $tercapai1->sum;
+    
+        $data['tercapai'] = $tercapai;
+		$data['belumtercapai'] = $belumtercapai;
 
 		$data['datadivisi'] = Divisi::with('Upt')->get();
        
