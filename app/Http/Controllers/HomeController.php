@@ -53,7 +53,6 @@ class HomeController extends Controller
    ->first(); 
     $belumtercapai = 100 - $tercapai1->sum ;
     $tercapai = $tercapai1->sum;
-    
         $data['tercapai'] = $tercapai;
 		$data['belumtercapai'] = $belumtercapai;
 

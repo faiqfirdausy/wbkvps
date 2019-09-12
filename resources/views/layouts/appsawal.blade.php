@@ -96,8 +96,14 @@
 				indexLabel: "{label} - #percent%",
 				toolTipContent: "<b>{label}:</b> {y} (#percent%)",
 				dataPoints: [
+				@if(!empty($tercapai))
 					{ y: {{$tercapai}}, label: "Tercapai" },
 					{ y: {{$belumtercapai}}, label: "Belum Tercapai" }
+				@else
+					{ y: 0, label: "Tercapai" },
+					{ y: 100, label: "Belum Tercapai" }
+
+				@endif
 				]
 			}]
 		});
