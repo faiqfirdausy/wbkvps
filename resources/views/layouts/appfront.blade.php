@@ -116,7 +116,7 @@
 				<div class="row">
 					<div class="col-md-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<p class="copyright text-center">
-							Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa timur. All rights reserved. Designed & developed by <a href="http://themefisher.com/">Kanwil Jatim</a>
+							Copyright &copy; 2019 Kanwil Kementerian Hukum dan HAM Jawa Timur. All rights reserved. Designed & developed by <a href="https://jatim.kemenkumham.go.id/">Kanwil Jatim</a>
 						</p>
 					</div>
 					
