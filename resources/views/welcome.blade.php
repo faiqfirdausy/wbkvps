@@ -11,10 +11,14 @@
 				<div class="carousel-inner" role="listbox">
 					
 					<!-- banner -->
-					<div class="item active" style="background-image: url({{ asset('frontend/img/banner2.gif') }});">
+					<div class="item active" style="background-image: url({{ asset('frontend/img/banner.gif') }});">
+						
 						<div class="carousel-caption">
 							<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-								<img src="{{ asset('frontend/img/logo2.png') }}" width="65%">
+								<img src="{{ asset('frontend/img/logo.png') }}" width="45%">
+							</div>
+							<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+								<img src="{{ asset('frontend/img/logo2.png') }}" width="55%">
 							</div>
 									<div class="work-filter fadeInRight animated" data-wow-duration="500ms">
 										<ul>
@@ -22,12 +26,7 @@
 											<li><a href="#pimti" data-wow-duration="1000ms" class="wow slideInRight animated">CAPAIAN ZI</a></li>
 										</ul>
 									</div>
-							<ul class="social-links text-center">
-								<li><a href="https://twitter.com/Kemenkumham_Jtm"><i class="fa fa-twitter fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-								<li><a href=""><i class="fa fa-instagram fa-lg"></i></a></li>
-								<li><a href="https://jatim.kemenkumham.go.id/"><i class="fa fa-dribbble fa-lg"></i></a></li>
-							</ul>
+							
 						</div>
 					</div>
 					<!-- end banner -->
@@ -102,14 +101,7 @@
 						}
 
 					</style>
-					<div class="sec-sub-title wow rubberBand animated" data-wow-duration="1000ms">
-						<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-							<div class="contact-form">
-								<form action="#" id="contact-form">
-									
-								</form>
-							</div>
-						</div>
+						<div class="table-responsive no-padding">
 						  <table id="example1" class="table table-bordered table-striped">
 							<thead>
 							 <tr class="header">
@@ -171,8 +163,7 @@
 							  @endforeach
 							</tbody>
 						  </table>
-						  
-					</div>
+						  </div>
 			
 				</div>
 			</div>

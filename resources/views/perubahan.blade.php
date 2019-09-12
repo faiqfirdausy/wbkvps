@@ -83,6 +83,7 @@
 				
 			<div class="box-body">
         <p>{{$data->keterangan}}</p>
+		<div class="table-responsive no-padding">
               <table id="example" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -410,6 +411,7 @@
                @endforeach
 				</tbody>
               </table>
+			  </div>
             </div>
               </div>
               <!-- /.tab-pane -->
