@@ -18,7 +18,9 @@ use App\Model\Upt;
 use App\Model\DataFile;
 use App\Model\DataDukung;
 use App\Model\File2;
-
+use App\Model\TransaksiIpk;
+use App\Model\TransaksiVideo;
+use App\Model\TransaksiAcplan;
 
 use File;
 
@@ -43,7 +45,9 @@ class HomeController2 extends Controller
 
 	    public function indexfront()
     {
-        $data['coba'] = 25 * 2.5;
+        $data['listvideo'] = TransaksiVideo::orderBy('id', 'DESC')->get();
+        $data['jumlahvideo'] = TransaksiVideo::all()->count();
+
         $data['listupt'] = Upt::all();
         $data['listnilai'] = Transaksi::groupBy('created_by')
    ->selectRaw('*, sum(nilai) as sum')
