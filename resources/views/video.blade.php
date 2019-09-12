@@ -76,20 +76,23 @@
                 <tr>
 				          <th>NO</th>
                   <th>JUDUL VIDEO</th>
-                  <th>LINK VIDEO</th>
-                  <th>COVER VIDEO</th>
-                  
+                  <th>LINK VIDEO</th>                  
                 </tr>
                 </thead>
                 <tbody>
-                  
+              @foreach($Transaksi as $data)   
+                  @php
+                  $i = 1;
+                  @endphp
         <tr>
-                  <td>1</td>
-                  <td>Triwulan I</td>
-                  <td>2019</td>
-                  <td>acplan2019.pdf</td>
+                  <td>{{$i}}</td>
+                  <td>{{$data->judul}}</td>
+                  <td><a href="{{$data->link}}">{{$data->link}}</a></td>
         </tr>
-						
+                @php
+                  $i++;
+                  @endphp
+						 @endforeach
                 </tbody>
                 <tfoot>
                 

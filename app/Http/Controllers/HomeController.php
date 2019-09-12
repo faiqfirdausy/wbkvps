@@ -129,6 +129,8 @@ class HomeController extends Controller
     }
 		public function video()
     {
+        $userId = Auth::user()->id;
+        $data['Transaksi'] = TransaksiVideo::where('created_by',$userId)->get();
         $data['session'] = Auth::user();
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
 
