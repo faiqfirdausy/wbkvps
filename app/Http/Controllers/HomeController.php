@@ -72,6 +72,61 @@ class HomeController extends Controller
     {
         return view('perubahan');
     }
+        public function updatevideo(Request $request)
+    {
+      dd($request->cover); 
+        $userId = Auth::user()->id;
+
+       $ruleskosong = array(
+                    'judul'  => 'required',
+                    'cover'  => 'required',
+                    'link'   => 'required',
+                );
+        $rulesbesar = array(
+                    'cover'  => 'max:52048|dimensions:width=400,height=300'
+                );
+        $error = Validator::make($request->all(), $ruleskosong);
+        $errorbesar = Validator::make($request->all(), $rulesbesar);
+        if($error->fails())
+        {
+        $id_transaksi = $request->idtransaksi;
+        return redirect('video/')->with('pesan', 'kosong');
+
+        }
+        else if($errorbesar->fails())
+        {
+        return redirect('video/')->with('pesan', 'besar');
+
+        }
+        DB::beginTransaction();
+
+            try {
+                $TransaksiVideo = new TransaksiVideo;
+                $TransaksiVideo->created_by = $userId;
+                $TransaksiVideo->link = $request->link;
+                $TransaksiVideo->judul = $request->judul;
+                $uploaded = $request->file('cover');
+                $ext = $uploaded->getClientOriginalExtension();
+                $oriname = $uploaded->getClientOriginalName();
+                $filename = $oriname;
+                Storage::disk('local')->putFileAs('file_upload/'.$nama_upt.'/Video/', $uploaded, $filename);
+                $fileUpload = 'file_upload/'.$nama_upt.'/Video/'.$filename;
+                $TransaksiVideo->path = $fileUpload;
+                $TransaksiVideo->namafile = $filename;
+                $TransaksiVideo->save();
+                
+
+                
+                DB::commit();
+                // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+
+                return redirect('video/')->with('pesan', 'sukses');
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
+    }
 		public function video()
     {
         $data['session'] = Auth::user();

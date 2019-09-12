@@ -26,6 +26,8 @@ Route::get('download-ipkikm/{id_file}', 'HomeController@downloadIpk');
 Route::get('/status', 'HomeController@status')->name('home');
 
 Route::get('/video', 'HomeController@video')->name('home');
+Route::post('/video/update', 'HomeController@updatevideo')->name('home');
+
 Route::get('/acplan', 'HomeController@acplan')->name('home');
 Route::get('/video', 'HomeController@video')->name('home');
 Route::get('/acplan', 'HomeController@acplan')->name('home');
