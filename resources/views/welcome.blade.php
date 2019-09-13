@@ -128,11 +128,13 @@
 								$temp =0;
 								@endphp
 								@foreach($listnilai as $list2)
-
 									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
 									@php
 									$temp = 1;
 									@endphp
+									@if(!empty($list->sum))
+
+
 									<div class="container-bar">
 										<style>
 										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
@@ -153,6 +155,17 @@
 									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >{{$list2->sum}}%</div>
 
 									</div>
+									@else
+									<div class="container-bar">
+										<style>
+											div.warna{{$list2->CreatedUser->Upt->id_upt}}{
+											width: 0%; 
+											background-color: #f44336;
+												}
+										</style>
+										  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >0%</div>
+
+									@endif
 									@else
 									@endif
 								@endforeach
