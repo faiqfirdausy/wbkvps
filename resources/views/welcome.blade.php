@@ -133,7 +133,7 @@
 									$asd = 0;
 									$temp = 1;
 									@endphp
-									<!--
+									
 									<div class="container-bar">
 										<style>
 										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
@@ -156,7 +156,7 @@
 
 											@endif
 												}
-										</style>-->
+										</style>
 									
 									@if(is_null($list2->sum))
 									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >0%</div>
