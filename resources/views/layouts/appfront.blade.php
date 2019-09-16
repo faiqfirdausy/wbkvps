@@ -262,11 +262,10 @@
 		<script src="{{ asset('js/dataTables.bootstrap.min.js')}}"></script>
 		<script>
 		$(document).ready( function () {
-			$('#example1').DataTable(
-				{
-  "language": {
-    "decimal": "."
-  }
+			$('#example1').DataTable({
+  "columnDefs": [
+    { "orderable": false, "targets": [1,2,3] }
+  ]
 } );
 		} );
 		</script>

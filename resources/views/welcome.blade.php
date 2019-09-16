@@ -117,68 +117,49 @@
 								@php
                  				$i = 1;
                   				@endphp
-								  @foreach($listupt as $list)
+								  @foreach($listnilai as $list)
                  						 
 							  <tr>
 								<td>{{$i}}</td>
-								<td>{{$list->nama_upt}}</td>
+								<td>{{$list->CreatedUser->Upt->nama_upt}}</td>
 
 								<td>
-								@php
-								$temp =0;
-								@endphp
-								@foreach($listnilai as $list2)
-									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
-									@php
-									$asd = 0;
-									$temp = 1;
-									@endphp
+								
 									<div class="container-bar">
 										<style>
-										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
-											@if(is_null($list2->sum))
+										@php
+										$asd =0;
+										@endphp
+										div.warna{{$list->CreatedUser->Upt->id_upt}}{
+											@if(is_null($list->sum))
 											background-color: #f44336;
 											width: {{$asd}}%; 
 
-											@elseif($list2->sum < 40 && $list2->sum >0)
+											@elseif($list->sum < 40 && $list->sum >0)
 											background-color: #f44336;
-											width: {{$list2->sum}}%; 
+											width: {{$list->sum}}%; 
 
-											@elseif($list2->sum > 40 && $list->sum < 70)
+											@elseif($list->sum > 40 && $list->sum < 70)
 											background-color: #EBAF24;
-											width: {{$list2->sum}}%; 
+											width: {{$list->sum}}%; 
 
 
 											@else
 											background-color: #4CAF50;
-											width: {{$list2->sum}}%; 
+											width: {{$list->sum}}%; 
 
 											@endif
 												}
 										</style>
 									
-									@if(is_null($list2->sum))
-									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >0%</div>
+									@if(is_null($list->sum))
+									  <div class="skills-bar warna{{$list->CreatedUser->Upt->id_upt}}" >0%</div>
 									@else
-									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >{{$list2->sum}}%</div>
+									  <div class="skills-bar warna{{$list->CreatedUser->Upt->id_upt}}" >{{$list->sum}}%</div>
 									@endif
 
 									</div>
-									@else
-									@endif
-								@endforeach
-								@if($temp ==0)
-								<div class="container-bar">
-								<style>
-									div.warnazz{
-											width: 0%; 
-											background-color: #f44336;
-										}
-								</style>
-  									<div class="skills-bar warnazz" >0%</div>
-
-								</div>
-								@endif
+								
 
 
 
