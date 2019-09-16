@@ -128,29 +128,40 @@
 								$temp =0;
 								@endphp
 								@foreach($listnilai as $list2)
-
 									@if($list2->CreatedUser->Upt->id_upt == $list->id_upt)
 									@php
+									$asd = 0;
 									$temp = 1;
 									@endphp
 									<div class="container-bar">
 										<style>
 										div.warna{{$list2->CreatedUser->Upt->id_upt}}{
-											width: {{$list2->sum}}%; 
-											@if($list2->sum < 40)
+											@if(is_null($list2->sum))
 											background-color: #f44336;
+											width: {{$asd}}%; 
 
-											@elseif($list2->sum < 40 && $list->sum < 70)
+											@elseif($list2->sum < 40 && $list2->sum >0)
+											background-color: #f44336;
+											width: {{$list2->sum}}%; 
+
+											@elseif($list2->sum > 40 && $list->sum < 70)
 											background-color: #EBAF24;
+											width: {{$list2->sum}}%; 
+
 
 											@else
 											background-color: #4CAF50;
+											width: {{$list2->sum}}%; 
+
 											@endif
 												}
 										</style>
 									
-
+									@if(is_null($list2->sum))
+									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >0%</div>
+									@else
 									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >{{$list2->sum}}%</div>
+									@endif
 
 									</div>
 									@else

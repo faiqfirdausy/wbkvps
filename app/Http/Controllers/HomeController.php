@@ -65,6 +65,7 @@ class HomeController extends Controller
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $romawi =RomawiSoal::with('NomorSoal')->get();
         $ses =  Auth::user();
+
         $data['tnonverif'] = Transaksi::where('status',0)->get();
         $data['tverif'] = Transaksi::where('status',1)->get();
         $data['trevisi'] = Transaksi::where('status',2)->get();
@@ -332,14 +333,25 @@ class HomeController extends Controller
 
         return view('pertanyaan2.home',$data);
     }
+           public function notifikasi($id)
+    {
+        $userId = Auth::user()->id;
+
+        $data['session'] = Auth::user();
+        $datatransaksi = Transaksi::findorFail($id);
+        return redirect('pertanyaan2/kategori/'.$datatransaksi->AbcSoal->NomorSoal->RomawiSoal->id)->with('id_romawi', $datatransaksi->AbcSoal->NomorSoal->id)->with('id_abc',$datatransaksi->AbcSoal->id);
+
+    }
         public function subindikator($id)
     {
+        $userId = Auth::user()->id;
 
         $data['session'] = Auth::user();
         $c = session('id_romawi');
         $data['tab'] = session('id_romawi') ?? 1;
+        $data['trevisi'] = Transaksi::where('status',2)->where('created_by',$userId)->get();
+        $data['jmlrevisi'] = Transaksi::where('status',2)->where('created_by',$userId)->count();
 
-        
         // $data['transaksi'] = Transaksi::where('created_by', Auth::user()->id)->with('files')->first();
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $data['romawi'] = RomawiSoal::with('NomorSoal')->findorFail($id);

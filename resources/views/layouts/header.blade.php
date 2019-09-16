@@ -15,6 +15,33 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              @if($jmlrevisi != 0)
+              <span class="label label-warning">{{$jmlrevisi}}</span>
+              @else
+              @endif
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Anda Memiliki {{$jmlrevisi}} Revisi</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  @if(!empty($trevisi))
+                  @foreach($trevisi as $data)
+                  <li>
+                    <a href="{{url('pertanyaan2/notifikasi/'.$data->id)}}">
+                      <i class="fa fa-users text-aqua"></i>  Revisi di {{$data->AbcSoal->NomorSoal->RomawiSoal->nama}}, {{$data->AbcSoal->NomorSoal->nama}}
+                    </a>
+                  </li>
+                  @endforeach
+                  @endif
+                </ul>
+              </li>
+              <li class="footer"></li>
+            </ul>
+          </li>
 
           <!-- Notifications: style can be found in dropdown.less -->
  

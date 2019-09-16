@@ -105,7 +105,7 @@
                 $j++;
                 @endphp
                 <tr>
-					         <td>{{$j}}</td>
+					         <td id="abc{{$abc->id}}">{{$j}}</td>
                   <td>{{$abc->nama}}</td>
                   <td>{!! $abc->petunjuk_teknis !!}
                   </td>
