@@ -65,7 +65,8 @@ class HomeController extends Controller
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         $romawi =RomawiSoal::with('NomorSoal')->get();
         $ses =  Auth::user();
-
+                $data['trevisi2'] = Transaksi::where('status',2)->where('created_by',$userId)->get();
+        $data['jmlrevisi'] = Transaksi::where('status',2)->where('created_by',$userId)->count();
         $data['tnonverif'] = Transaksi::where('status',0)->get();
         $data['tverif'] = Transaksi::where('status',1)->get();
         $data['trevisi'] = Transaksi::where('status',2)->get();
