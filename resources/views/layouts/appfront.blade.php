@@ -262,7 +262,12 @@
 		<script src="{{ asset('js/dataTables.bootstrap.min.js')}}"></script>
 		<script>
 		$(document).ready( function () {
-			$('#example1').DataTable();
+			$('#example1').DataTable(
+				{
+  "language": {
+    "decimal": "."
+  }
+} );
 		} );
 		</script>
 
