@@ -445,6 +445,11 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
+  @if(!empty(session('id_abc')))
+    $( document ).ready(function() {
+      window.location.hash = '#abc{{session('id_abc')}}';
+      });
+  @endif
   @if(!empty(session('pesan')))
     @if(session('pesan') == 'upload')
       $( document ).ready(function() {
