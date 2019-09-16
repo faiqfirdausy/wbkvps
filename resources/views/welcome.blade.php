@@ -158,9 +158,9 @@
 										</style>
 									
 									@if(is_null($list2->sum))
-									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >0%</div>
+									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" data-order="0">0%</div>
 									@else
-									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" >{{$list2->sum}}%</div>
+									  <div class="skills-bar warna{{$list2->CreatedUser->Upt->id_upt}}" data-order="{{$list2->sum}}">{{$list2->sum}}%</div>
 									@endif
 
 									</div>
