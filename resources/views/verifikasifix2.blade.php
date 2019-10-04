@@ -124,14 +124,11 @@
                                         <h4 class="modal-title">Verifikasi </h4>
                                     </div>
                                     <div class="modal-body">
-                                      <label>Capaian</label>
+                                      <label>Status</label>
                                       <select name="capaian" class="form-control">
                                         <option value="">--</option>
-                                        <option value="2">20%</option>
-                                        <option value="4">40%</option>
-                                        <option value="6">60%</option>
-                                        <option value="8">80%</option>
-                                        <option value="10">100%</option>
+                                        <option value="10">Verifikasi</option>
+                                        <option value="0">Revisi</option>
                                      </select>
                                       <br>
                                       
@@ -217,7 +214,7 @@
 
         Swal.fire(
         'Gagal!',
-        'Capaian Tidak Boleh Kosong',
+        'Status Tidak Boleh Kosong',
         'error',
         )
         });
