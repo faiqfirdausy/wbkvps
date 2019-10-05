@@ -101,7 +101,21 @@
 						}
 
 					</style>
+						<center>
+						  <div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Pilih Kantor Wilayah
+							<span class="caret"></span></button>
+							<button type="button" class="btn btn-primary">Filter</button>
+							<ul class="dropdown-menu">
+							  <li><a href="#">HTML</a></li>
+							  <li><a href="#">CSS</a></li>
+							  <li><a href="#">JavaScript</a></li>
+							</ul>
+						  </div>
+						 </center>
+						  </br>
 						<div class="table-responsive no-padding">
+							
 						  <table id="example1" class="table table-bordered table-striped">
 							<thead>
 							 <tr class="header">
