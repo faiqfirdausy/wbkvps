@@ -459,7 +459,7 @@
 						<h4>{{$video->judul}}</h4>
 						<p>{{$video->CreatedUser->upt->nama_upt}}</p>
 						<p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
-						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/iqh3NnoWgxY" data-target="#myModal">
+						<button type="button" class="btn btn-default video-btn" data-toggle="modal" data-src="{{$video->link}}" data-target="#myModal">
 						  Putar Video
 						</button>
 					</figcaption>
