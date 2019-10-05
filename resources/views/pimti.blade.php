@@ -4,7 +4,7 @@
     <section class="content-header">
       <h1>
         Halaman PIMTI
-        <small>Sistem Monitoring & Evaluasi Pembangunan Zona Integritas</small>
+        <small>Sistem Informasi Administrasi Pembangunan Zona Integritas</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{url('home')}}"><i class="fa fa-dashboard"></i> Beranda</a></li>
