@@ -125,11 +125,17 @@
                                     </div>
                                     <div class="modal-body">
                                       <label>Status</label>
-                                      <select name="capaian" class="form-control">
-                                        <option value="">--</option>
-                                        <option value="10">Verifikasi</option>
-                                        <option value="0">Revisi</option>
-                                     </select>
+                                     
+									  <div class="radio">
+										<label class="radio-inline">
+											<input type="radio" value="10" name="capaian" checked="checked"/>&nbsp;
+											   Verifikasi
+										</label>
+										   <label class="radio-inline">
+										   <input type="radio" value="0" name="capaian"/>&nbsp;
+                                           Revisi
+										   </label>
+									</div>
                                       <br>
                                       
                                       <label>Keterangan</label>
