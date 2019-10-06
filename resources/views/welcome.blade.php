@@ -178,8 +178,25 @@
 
 
 								</td>
+								@if(is_null($list->sum))
+
 								<td>Harus meningkatkan pengawasan terhadap UPT
+
 								</td>
+								@elseif($list->sum <=40)
+								<td>Harus meningkatkan pengawasan terhadap UPT
+
+								</td>
+								@elseif($list->sum> 40 && $list->sum <=60)
+								<td>Dapat dilakukan penguatan terhadap UPT
+
+								</td>
+
+								@elseif($list->sum> 60)
+								<td>Dapat di rekomendasikan untuk mengikuti kontestasi WBK/ WBBM
+
+								</td>
+								@endif
 								<!--<td><a href="#" class="btn btn-success " role="button" data-toggle="modal" data-target="#myModal1" >Detail</a></td>-->
 								
 							  </tr>
