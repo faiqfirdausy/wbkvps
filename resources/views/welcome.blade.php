@@ -101,6 +101,7 @@
 						}
 
 					</style>
+					<!--
 						<center>
 						  <div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Pilih Kantor Wilayah
@@ -113,7 +114,7 @@
 							</ul>
 						  </div>
 						 </center>
-						  </br>
+						  </br>-->
 						<div class="table-responsive no-padding">
 							
 						  <table id="example1" class="table table-bordered table-striped">

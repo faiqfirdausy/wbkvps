@@ -110,8 +110,8 @@
         </li>
 
         
-		<!--<li ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/IKM</a></li>-->s
-		<li class="active"><a href="{{url('acplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>
+		<!--<li ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/IKM</a></li>
+		<li class="active"><a href="{{url('acplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>-->
 		<li ><a href="{{url('video')}}"><i class="fa fa-camera"></i>Video</a></li>
 
         
