@@ -92,10 +92,10 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-				  <th>NO</th>
+				          <th>NO</th>
                   <th>PERIODE</th>
                   <th>TAHUN</th>
-				  <th>NILAI</th>
+				          <th>NILAI</th>
                   <th>BERKAS</th>
                   <th>STATUS</th>
                   

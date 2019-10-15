@@ -217,10 +217,77 @@ class HomeController extends Controller
                 DB::rollback();
             }
     }
-		public function acplan()
+		public function acplaninsert(Request $request)
     {
-		$data['session'] = Auth::user();
-		$data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+		$userId = Auth::user()->id;
+        $upt = User::with('Upt')->find($userId);
+        $nama_upt = $upt->Upt->nama_upt;
+        $ruleskosong = array(
+                    'upload_files'  => 'required',
+                    'tahun'         => 'required',
+                    'semester'         => 'required'
+                );
+        $rulesbesar = array(
+                    'upload_files'  => 'max:52048'
+                );
+        $error = Validator::make($request->all(), $ruleskosong);
+        $errorbesar = Validator::make($request->all(), $rulesbesar);
+        if($error->fails())
+        {
+        $id_transaksi = $request->idtransaksi;
+        return redirect('acplan/')->with('pesan', 'kosong');
+
+        }
+        else if($errorbesar->fails())
+        {
+        return redirect('acplan/')->with('pesan', 'besar');
+
+        }
+
+
+         DB::beginTransaction();
+
+            try {
+                $TransaksiAcplan = new TransaksiAcplan;
+                $TransaksiAcplan->periode = $request->semester;
+                $TransaksiAcplan->tahun = $request->tahun;
+                $TransaksiAcplan->created_by = $userId;
+
+                $uploaded = $request->file('upload_files');
+                $ext = $uploaded->getClientOriginalExtension();
+                $oriname = $uploaded->getClientOriginalName();
+                $filename = $oriname;
+                Storage::disk('local')->putFileAs('file_upload/'.$nama_upt.'/ActPlan/', $uploaded, $filename);
+                $fileUpload = 'file_upload/'.$nama_upt.'/ActPlan/'.$filename;
+                $TransaksiAcplan->path = $fileUpload;
+                $TransaksiAcplan->namafile = $filename;
+                $TransaksiAcplan->status =0;
+
+
+
+                $TransaksiAcplan->save();
+                
+
+                
+                DB::commit();
+                // \Session::flash('success_flash_message','Data Mahasiswa Berhasil Ditambah.');
+
+            return redirect('acplan/')->with('pesan', 'sukses');
+
+            } catch (Exception $e) {
+                return response()->json(['error' => 'silahkan coba lagi']);
+                DB::rollback();
+            }
+    }
+    public function acplan()
+    {
+
+
+        $userId = Auth::user()->id;
+        $data['acplan'] = TransaksiAcplan::where('created_by',$userId)->get();
+
+        $data['session'] = Auth::user();
+        $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('acplan', $data);
     }
      public function updateverif(Request $request)
@@ -405,6 +472,55 @@ class HomeController extends Controller
         return redirect('verifikasi/'.$id_transaksi)->with('pesan', 'erorkosong');
 
            }
+
+    }
+      public function downloadManual()
+    {
+        $path = public_path().'/manualbook/Manual Book SIAP ZI.pdf';
+   
+
+
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = "Manual Book SIAP ZI.pdf";
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+
+        
+
+
+    }
+     public function downloadAcplan($id_file)
+    {
+        $file = TransaksiAcplan::find($id_file);
+        $path = public_path().'/'.$file->path;
+        if(!empty($file->path))
+        {
+
+
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = $file->namafile;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+        else {
+              return redirect('acplan/')->with('pesan', 'filekosong');
+
+           }
+        }
+        else
+        {
+              return redirect('acplan/')->with('pesan', 'filekosong');
+
+        }
 
     }
      public function downloadIpk($id_file)

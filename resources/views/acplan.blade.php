@@ -28,17 +28,17 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="POST" action="{{ url('acplan/update') }}" enctype="multipart/form-data">
+              {!! csrf_field() !!}
+
               <div class="box-body">
                 <!-- select -->
                 <div class="form-group">
                   <label>Periode</label>
-                  <select class="form-control">
-                    <option>-</option>
-                    <option>Triwulan I</option>
-                    <option>Triwulan II</option>
-                    <option>Triwulan III</option>
-                    <option>Triwulan IV</option>
+                  <select name="semester" class="form-control">
+                    <option value="">--</option>
+                    <option value="Semester I">Semester I</option>
+                    <option value="Semester II">Semester II</option>
                   </select>
                 </div>
 				<!-- Date -->
@@ -49,13 +49,13 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-				  <input class="date-own form-control" type="text" placeholder="Pilih Tahun">
+				  <input name="tahun" class="date-own form-control" type="text">
                 </div>
                 <!-- /.input group -->
               </div>
 				<div class="form-group">
                   <label for="exampleInputFile">Unggah berkas</label>
-                  <input type="file" id="exampleInputFile">
+                  <input type="file" name="upload_files" id="exampleInputFile">
 				  <p class="help-block">*berkas maksimal berukuran 50MB</p>
                 </div>
 				
@@ -79,14 +79,14 @@
 		<!--table-->
 		<div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table Action Plan</h3>
+              <h3 class="box-title">Tabel Action Plan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
-				  <th>NO</th>
+               <tr>
+                  <th>NO</th>
                   <th>PERIODE</th>
                   <th>TAHUN</th>
                   <th>BERKAS</th>
@@ -94,38 +94,28 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Triwulan I</td>
-                  <td>2019</td>
-                  <td>acplan2019.pdf</td>
+                @if(!empty($acplan))
+                @php
+                $i = 0;
+                @endphp
+                @foreach($acplan as $data)
+                 @php
+                $i++
+                @endphp
+                <tr>                
+
+                  <td>{{$i}}</td>
+                  <td>{{$data->periode}}</td>
+                  <td>{{$data->tahun}}</td>
+                  <td>
+                  <a href="{{url('download-acplan/'.$data->id)}}">{{$data->namafile}}</a>
+
+                  </td>
+
                 </tr>
-				<tr>
-                  <td>1</td>
-                  <td>Triwulan I</td>
-                  <td>2019</td>
-                  <td>acplan2019.pdf</td>
-                </tr>  
-				<tr>
-                  <td>1</td>
-                  <td>Triwulan I</td>
-                  <td>2019</td>
-                  <td>acplan2019.pdf</td>
-                </tr>  
-				<tr>
-                  <td>1</td>
-                  <td>Triwulan I</td>
-                  <td>2019</td>
-                  <td>acplan2019.pdf</td>
-                </tr>  				
-                </tbody>
-                <tfoot>
-                <tr>
-				  <th>NO</th>
-                  <th>PERIODE</th>
-                  <th>TAHUN</th>
-                  <th>BERKAS</th>
-                </tr>
+                @endforeach
+                @endif
+	
                 </tfoot>
               </table>
             </div>
@@ -137,4 +127,49 @@
 
 
     <!-- /.content -->
+@endsection
+@section('scripts')
+<script type="text/javascript">
+  @if(!empty(session('pesan')))
+    @if(session('pesan') == 'sukses')
+      $( document ).ready(function() {
+
+        Swal.fire(
+        'Sukses!',
+        'Anda Berhasil Mengupload File',
+        'success',
+        )
+        });
+    @elseif(session('pesan') == 'kosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'Field Tidak Boleh Kosong',
+        'error',
+        )
+        });
+     @elseif(session('pesan') == 'filekosong')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Ditemukan',
+        'error',
+        )
+        });
+    @elseif(session('pesan') == 'besar')
+        $( document ).ready(function() {
+
+        Swal.fire(
+        'Gagal!',
+        'File Tidak Boleh Lebih Besar dari 50 MB',
+        'error',
+        )
+        });
+    @endif
+
+
+  @endif
+</script>
 @endsection

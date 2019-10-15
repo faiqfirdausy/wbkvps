@@ -138,9 +138,11 @@
         </li>
 
        
-		<!--<li ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/IKM</a></li>
-		<li ><a href="{{url('acplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>-->
+		<!--<li ><a href="{{url('ipkikm')}}"><i class="fa fa-bar-chart"></i>IPK/IKM</a></li>-->
+		<li ><a href="{{url('acplan')}}"><i class="fa fa-pencil-square-o"></i>Action Plan</a></li>
 		 <li ><a href="{{url('video')}}"><i class="fa fa-camera"></i>Video</a></li>
+      <li><a href="{{url('downloadmanual')}}"><i class="fa fa-download"></i>Download Manual Book</a></li>
+
 		 <!--<li ><a href="{{url('status')}}"><i class="fa fa-bar-chart"></i>Status</a></li>-->
 
         
