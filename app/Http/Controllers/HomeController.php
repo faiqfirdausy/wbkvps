@@ -290,6 +290,16 @@ class HomeController extends Controller
         $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
         return view('acplan', $data);
     }
+      public function viewDownload()
+    {
+
+
+        $userId = Auth::user()->id;
+
+        $data['session'] = Auth::user();
+        $data['kategori'] = RomawiSoal::with('NomorSoal')->get();
+        return view('viewdownload', $data);
+    }
      public function updateverif(Request $request)
     {
         $rules = array(
@@ -484,6 +494,26 @@ class HomeController extends Controller
     //echo "n exist"; die();
 
         $filename = "Manual Book SIAP ZI.pdf";
+        $tempImage = tempnam(sys_get_temp_dir(), $filename);
+        copy($path, $tempImage);
+
+        return response()->download($tempImage, $filename);
+        }
+
+        
+
+
+    }
+     public function downloadSop()
+    {
+        $path = public_path().'/manualbook/SOP SIAP ZI.pdf';
+   
+
+
+        if(File::exists($path)){
+    //echo "n exist"; die();
+
+        $filename = "SOP SIAP ZI.pdf";
         $tempImage = tempnam(sys_get_temp_dir(), $filename);
         copy($path, $tempImage);
 

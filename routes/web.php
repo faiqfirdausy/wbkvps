@@ -24,8 +24,11 @@ Route::get('/ipkikm', 'HomeController@ipkikm')->name('home');
 Route::post('/ipkikm/update', 'HomeController@ipkikminsert')->name('home');
 Route::get('download-ipkikm/{id_file}', 'HomeController@downloadIpk');
 Route::get('download-acplan/{id_file}', 'HomeController@downloadAcplan');
+Route::get('/viewdownload', 'HomeController@viewDownload');
 
 Route::get('/downloadmanual', 'HomeController@downloadManual');
+Route::get('/downloadsop', 'HomeController@downloadSop');
+
 
 Route::get('/status', 'HomeController@status')->name('home');
 
