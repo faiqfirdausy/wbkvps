@@ -735,6 +735,7 @@ class HomeController extends Controller
                 $transaksi->status = 0;
                 $transaksi->created_by = $userId;
                 $transaksi->created_at = $time;
+                $transaksi->keterangan = null;
                 $transaksi->save();
                 $file->id_transaksi = $transaksi->id;
                 $file->id_datadukung = $id_datadukung;
