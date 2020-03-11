@@ -13,6 +13,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
 
+
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="dropdown notifications-menu">
@@ -70,9 +71,7 @@
                   <a href="{{ url('/') }}" class="btn btn-default btn-flat">Beranda</a>
                 </div>
                 <div class="pull-right">
-                  <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
-                     onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();">
+                  <a class="btn btn-default btn-flat" href="#" data-toggle="modal" data-target="#myModalsurvey">
                       {{ __('Logout') }}
                   </a>
 
@@ -145,7 +144,10 @@
 
 		 <!--<li ><a href="{{url('status')}}"><i class="fa fa-bar-chart"></i>Status</a></li>-->
 
+
+  
         
     </section>
+
     <!-- /.sidebar -->
   </aside>

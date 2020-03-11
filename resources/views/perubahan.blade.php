@@ -433,7 +433,48 @@
             </div>
             
           </div>
-		  
+		    <div class="modal fade" id="myModalsurvey" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Bagaimana Fitur Notifikasi Kami menurut anda?</h3>
+        </div>
+        <div class="modal-body">
+          <img src="http://localhost/wbkvps/Logo-logo/notiftok.jpg" alt="Trulli" style="width:50%;display: block;
+  margin-left: auto;
+  margin-right: auto;">
+
+
+                 
+                    <div class="radio">
+                    <label class="radio-inline">
+                      <input type="radio" value="10" name="capaian" checked="checked"/>&nbsp;
+                         Memudahkan Proses Revisi
+                    </label>
+                       <label class="radio-inline">
+                       <input type="radio" value="0" name="capaian"/>&nbsp;
+                                           Tidak Memudahkan Proses Revisi
+                       </label>
+                  </div>
+                                      <br>
+                                      
+                                      <label>Kritik dan Saran</label>
+
+                                      <textarea name="keterangan" class="form-control" rows="3" placeholder="Kritik & Saran"></textarea>        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a href="{{ route('logout') }}" class="btn btn-success "
+  onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      Submit dan log Out</a>
+          </div>
+      </div>
+      
+    </div>
+  </div>
 
 
    
@@ -498,8 +539,17 @@
         });
 
     @endif
+  @elseif(empty(session('id_abc')))
+   $( document ).ready(function() {
 
+Swal.fire({
 
+  imageUrl: 'http://localhost/wbkvps/Logo-logo/updatenotif.jpg',
+
+  imageAlt: 'Custom image',
+  animation: false
+})
+        });
   @endif
 </script>
 @endsection
